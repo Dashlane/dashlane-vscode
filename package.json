@@ -3,6 +3,10 @@
   "displayName": "dashlane-vscode",
   "description": "Use Dashlane CLI from VS Code",
   "version": "0.0.1",
+  "publisher": "Dashlane",
+  "repository": {
+    "url": "https://github.com/Dashlane/dashlane-vscode"
+  },
   "engines": {
     "vscode": "^1.86.0"
   },
