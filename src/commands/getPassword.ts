@@ -10,6 +10,12 @@ export const getPasswordCommand = vscode.commands.registerCommand('dashlane-vsco
 
     try {
         const parsedData = await getPassword(searchQuery);
+
+        if (parsedData.length === 0) {
+            vscode.window.showWarningMessage('No password matching search query, you may need to sync your Dashlane vault');
+            return;
+        }
+
         const quickPickItems = parsedData.map(passwordMapper.toQuickPickEntry);
     
         const pickedPassword = await vscode.window.showQuickPick(quickPickItems, {

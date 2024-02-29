@@ -10,6 +10,12 @@ export const getNoteCommand = vscode.commands.registerCommand('dashlane-vscode.g
 
     try {
         const parsedData = await getNote(searchQuery);
+
+        if (parsedData.length === 0) {
+            vscode.window.showWarningMessage('No note matching search query, you may need to sync your Dashlane vault');
+            return;
+        }
+
         const quickPickItems = parsedData.map(noteMapper.toQuickPickEntry);
     
         const pickedNote = await vscode.window.showQuickPick(quickPickItems, {
