@@ -1,10 +1,10 @@
-# dashlane-vscode
+# Dashlane for VS Code Extension
 
 The Dashlane VS Code extension helps integrate your favorite IDE with the Dashlane password manager.
 
 ## Features
 
-![Dashlane VS Code extension quickview](/images/dashlane-vscode-anim.gif)
+![Dashlane VS Code extension quick view](/images/dashlane-vscode-example.png)
 
 ## Requirements
 
