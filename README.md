@@ -14,13 +14,9 @@ This extension requires that you have installed the [Dashlane CLI](https://githu
 
 This extension contributes the following settings:
 
-* `dashlane-vscode.shell`: The shell path or a login-shell to override Dashlane CLI process default shell (see Node child_process.spawn()) for more detail.
-* `dashlane-vscode.cli`: The path to the Dashlane-CLI binary (resolvable from `$PATH`).
+-   `dashlane-vscode.shell`: The shell path or a login-shell to override Dashlane CLI process default shell (see Node child_process.spawn()) for more detail.
+-   `dashlane-vscode.cli`: The path to the Dashlane-CLI binary (resolvable from `$PATH`).
 
-## Known Issues
+## Contributing
 
-Limited feature set.
-
-## Release Notes
-
-No release yet.
+Feel free to contribute to this project, fork and pull request your ideas. Don't include work that is not open source or not from you.

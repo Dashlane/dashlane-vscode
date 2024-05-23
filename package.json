@@ -1,72 +1,93 @@
 {
-  "name": "dashlane-vscode",
-  "displayName": "dashlane-vscode",
-  "description": "Use Dashlane CLI from VS Code",
-  "version": "0.0.1",
-  "publisher": "Dashlane",
-  "repository": {
-    "url": "https://github.com/Dashlane/dashlane-vscode"
-  },
-  "engines": {
-    "vscode": "^1.86.0"
-  },
-  "categories": [
-    "Other"
-  ],
-  "activationEvents": [],
-  "main": "./out/extension.js",
-  "contributes": {
-    "commands": [
-      {
-        "command": "dashlane-vscode.sync",
-        "title": "Dashlane: Sync"
-      },
-      {
-        "command": "dashlane-vscode.logout",
-        "title": "Dashlane: Logout"
-      },
-      {
-        "command": "dashlane-vscode.getPassword",
-        "title": "Dashlane: Get Password"
-      },
-      {
-        "command": "dashlane-vscode.getNote",
-        "title": "Dashlane: Get Note"
-      }
+    "name": "dashlane-vscode",
+    "displayName": "dashlane-vscode",
+    "description": "Use Dashlane CLI from VS Code",
+    "version": "1.0.0",
+    "publisher": "Dashlane",
+    "license": "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Dashlane/dashlane-vscode"
+    },
+    "bugs": {
+        "url": "https://github.com/Dashlane/dashlane-vscode/issues"
+    },
+    "homepage": "https://dashlane.github.io/dashlane-cli",
+    "engines": {
+        "vscode": "^1.86.0"
+    },
+    "categories": [
+        "Snippets",
+        "Other"
     ],
-    "configuration": {
-      "title": "Dashlane",
-      "properties": {
-        "dashlane-vscode.shell": {
-          "type": "string",
-          "default": null,
-          "description": "The shell path or a login-shell to override Dashlane CLI process default shell (see Node child_process.spawn()) for more detail)"
-        },
-        "dashlane-vscode.cli": {
-          "type": "string",
-          "default": "dcli",
-          "description": "The path to the Dashlane-CLI binary (resolvable from $PATH)"
+    "keywords": [
+        "dashlane",
+        "password",
+        "cli",
+        "vscode"
+    ],
+    "icon": "images/icon.png",
+    "galleryBanner": {
+        "color": "#0b6476",
+        "theme": "dark"
+    },
+    "activationEvents": [],
+    "main": "./out/extension.js",
+    "contributes": {
+        "commands": [
+            {
+                "command": "dashlane-vscode.sync",
+                "title": "Dashlane: Sync"
+            },
+            {
+                "command": "dashlane-vscode.logout",
+                "title": "Dashlane: Logout"
+            },
+            {
+                "command": "dashlane-vscode.getPassword",
+                "title": "Dashlane: Get Password"
+            },
+            {
+                "command": "dashlane-vscode.getNote",
+                "title": "Dashlane: Get Note"
+            }
+        ],
+        "configuration": {
+            "title": "Dashlane",
+            "properties": {
+                "dashlane-vscode.shell": {
+                    "type": "string",
+                    "default": null,
+                    "description": "The shell path or a login-shell to override Dashlane CLI process default shell (see Node child_process.spawn()) for more detail)"
+                },
+                "dashlane-vscode.cli": {
+                    "type": "string",
+                    "default": "dcli",
+                    "description": "The path to the Dashlane-CLI binary (resolvable from $PATH)"
+                }
+            }
         }
-      }
+    },
+    "scripts": {
+        "vscode:prepublish": "yarn run compile",
+        "compile": "tsc -p ./",
+        "package": "vsce package --yarn",
+        "pretest": "yarn run compile && yarn run lint",
+        "publish": "vsce publish --yarn",
+        "lint": "eslint src --ext ts",
+        "test": "vscode-test",
+        "watch": "tsc -watch -p ./"
+    },
+    "devDependencies": {
+        "@types/mocha": "^10.0.6",
+        "@types/node": "18.x",
+        "@types/vscode": "^1.86.0",
+        "@typescript-eslint/eslint-plugin": "^7.0.2",
+        "@typescript-eslint/parser": "^7.0.2",
+        "@vscode/test-cli": "^0.0.6",
+        "@vscode/test-electron": "^2.3.9",
+        "@vscode/vsce": "^2.26.1",
+        "eslint": "^8.56.0",
+        "typescript": "^5.3.3"
     }
-  },
-  "scripts": {
-    "vscode:prepublish": "yarn run compile",
-    "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./",
-    "pretest": "yarn run compile && yarn run lint",
-    "lint": "eslint src --ext ts",
-    "test": "vscode-test"
-  },
-  "devDependencies": {
-    "@types/vscode": "^1.86.0",
-    "@types/mocha": "^10.0.6",
-    "@types/node": "18.x",
-    "@typescript-eslint/eslint-plugin": "^7.0.2",
-    "@typescript-eslint/parser": "^7.0.2",
-    "eslint": "^8.56.0",
-    "typescript": "^5.3.3",
-    "@vscode/test-cli": "^0.0.6",
-    "@vscode/test-electron": "^2.3.9"
-  }
 }
