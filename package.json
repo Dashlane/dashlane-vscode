@@ -71,9 +71,9 @@
     "scripts": {
         "vscode:prepublish": "yarn run compile",
         "compile": "tsc -p ./",
+        "deploy": "vsce publish --yarn",
         "package": "vsce package --yarn",
         "pretest": "yarn run compile && yarn run lint",
-        "publish": "vsce publish --yarn",
         "lint": "eslint src --ext ts",
         "test": "vscode-test",
         "watch": "tsc -watch -p ./"
