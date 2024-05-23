@@ -1,7 +1,7 @@
 {
     "name": "dashlane-vscode",
-    "displayName": "dashlane-vscode",
-    "description": "Use Dashlane CLI from VS Code",
+    "displayName": "Dashlane",
+    "description": "Load your passwords, secrets and notes from Dashlane in VS Code",
     "version": "1.0.0",
     "publisher": "Dashlane",
     "license": "Apache-2.0",
