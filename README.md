@@ -1,4 +1,4 @@
-# Dashlane for VS Code Extension
+# DEPRECATED - Dashlane for VS Code Extension
 
 The Dashlane VS Code extension helps integrate your favorite IDE with the Dashlane password manager.
 
