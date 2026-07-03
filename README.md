@@ -20,3 +20,5 @@ This extension contributes the following settings:
 ## Contributing
 
 Feel free to contribute to this project, fork and pull request your ideas. Don't include work that is not open source or not from you.
+
+** Microsoft Ownership Verification Commit **
